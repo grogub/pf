@@ -1,0 +1,158 @@
+html,body {
+    
+    height:100%;
+}
+footer {
+    padding: 50px ;
+}
+section {
+    margin-top:150px;
+    margin-bottom: 150px;
+}
+.button {
+    display: block;
+    background: rgb(255, 255, 255);
+    border:none;
+    width: 200px;
+    font-size: 20px;
+    font-weight:bolder;
+    margin: 20px auto;
+    text-align: center;
+    align-items: center;
+    font-family: 'Libertinus Mono', monospace;
+}
+ul{
+    padding-left: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+li {
+    font-size: 15px;
+ }
+.textbody {
+    width: 100%;
+    font-size: 13px;
+    
+    align-items: center;
+    text-align: center;
+}
+img {
+    width: 300px;
+    height: 288px;
+    object-fit: cover;
+}
+nav {
+    display: flex;
+    justify-content: flex-end; 
+}
+a {
+    font-weight:500;
+    color: #000000; 
+    text-decoration: none;
+    }
+a:hover {
+    text-decoration: underline;
+    }
+.custom-font {
+    font-family: 'Libertinus Mono', monospace;
+}
+
+@media (max-width: 768px) {
+    body nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+#project {
+    background-color: rgb(255, 255, 255);
+  position: relative;
+  /* margin: auto; */
+  /* overflow: hidden; */
+}
+
+.slider {
+  position: relative;
+  height: 340px;
+  width: 600px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+}
+.slidebox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slider .textbody {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  vertical-align: top;
+  white-space: normal;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+}
+.slider .textbody:first-child {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
+}
+
+.slider.textbody img {
+  width: 100%;
+  height: auto;
+  display: block;
+  
+}
+
+.arrowbutton {
+  /* position: absolute; */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  /* z-index: 9999; */
+}
+
+.arrowbutton.left {
+  /* left: 25rem; */
+}
+
+.arrowbutton.right {
+  /* right: 25rem; */
+}
+.indicator {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+  margin-top: 20px;
+  flex-direction: row;
+  z-index: 9999;
+}
+
+.indicator li {
+  display: inline-block;
+}
+
+.indicator i {
+  font-size: 1rem;
+  color: #000000;
+}
