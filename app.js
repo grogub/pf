@@ -1,8 +1,9 @@
 const slides = document.querySelectorAll('.slider .textbody');
+const indicators = document.querySelectorAll('.indicator i');
 let currentIndex = 0;
 
 function updateIndicators() {
-  const indicators = document.querySelectorAll('.indicator i');
+  
   indicators.forEach((dot, index) => {
     if (index === currentIndex) {
       dot.classList.remove('fa-regular');
@@ -42,5 +43,12 @@ document.querySelector('.arrowbutton.left').addEventListener('click', () => {
   updateSlides();
 });
 
+indicators.forEach((dot,index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    updateSlides();
+    
+  });
+});
 
 updateSlides();
