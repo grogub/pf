@@ -3,97 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    
+    />
     <script defer src="app.js" ></script>
+    <title>Portfolio</title>
 </head>
 <body>
     <header>
-        <h1 class="custom-font headertitle">eunkyung</h1>
-        <hr />
+
     </header>
-    <nav>
-        <a class="custom-font label" href="#about"> About </a>
-        <a class="custom-font label" href="#project"> Project </a>
-        <a class="custom-font label" href="#skill"> Skill </a>
-        <a class="custom-font label" href="#contact"> Contact </a>
+    <!-- nav -->
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <!-- <li><a href="#skills">Skills</a></li> -->
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
+    <!-- about -->
     <section id="about">
-        <button class="button">ABOUT</button>
-        <div class="aboutcard">
-        <div class="textbody">
-            <!-- <img src="./githubimg.png" alt="GitHub profile image" /> -->
-            <button class="profileicon"><i class="fa-solid fa-user"></i></button>
-        </div>
-        <div class="textbody">
-            <a href="https://github.com/grogub">grogub</a>
-            
-        </div>
-        <div class="textbody">
-            <p>김은경</p>
-        </div>
-        
-        <div class="textbody">
+        <h1>ABOUT</h1>
+        <img src="https://placehold.co/300x500" alt="photo" class="photo">      
+        <div class="subtext">
             <p>
-                끊임없이 배우고 싶은 개발자 김은경입니다.
+                김은경
+            </p>
+            <p>
+                끊임없이 배우고 싶은 개발자 김은경입니다
             </p>
         </div>
-        </div>
     </section>
 
-    <section id="project">
-        <button class="button">PROJECT</button>
-        <div class="slidebox">
-        
-        <button class="arrowbutton left"><i class="fa-solid fa-arrow-left"></i></button>
-        <ul class="slider">
-            <li class="textbody">
-                <img src="https://placehold.co/600x400" alt="1" />
-            <p>프로젝트 1 입니다. Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </li>
-            <li class="textbody">
-                <img src="https://placehold.co/600x400" alt="2" />
-            <p>프로젝트 2 입니다. Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </li>
-            <li class="textbody">
-                <img src="https://placehold.co/600x400" alt="3" />
-            <p>프로젝트 3 입니다. Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            </li>
-        </ul>
-        <button class="arrowbutton right"><i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-        <ul class="indicator">
-            <li><button class="indibtn"><i class="fa-regular fa-square"></i></button></li>
-            <li><button class="indibtn"><i class="fa-regular fa-square"></i></button></li>
-            <li><button class="indibtn"><i class="fa-regular fa-square"></i></button></li>
-        </ul>
-        
-    </section>
+    <!-- projects -->
+    <section id="projects">
+  <h1>PROJECTS</h1>
+  <div class="slidecontainer">
 
-    <section id="skill">
-        <button class="button">SKILL</button>
-        <ul>
-            <li>JAVA</li>
-            <li>SPRING</li>
-            <li>MYSQL</li>
-            <li>JAVASCRIPT</li>
-            <li>PYTHON</li>
-        </ul>
-    </section>
+    <div class="slides">
+      <div class="project">
+        <div class="slidetext">
+          <h3>01/project1</h3>
+          <p>Short description of project 1. Short description of project 1. Short description of project 1Short description of project 1Short description of project 1Short description of project 1</p>
+          <div class="badge">
+            <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white" alt="spring">
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white" alt="javascript">
+            <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white" alt="mysql">
+          </div>
+        </div>
+        <img src="https://placehold.co/700x500" alt="1">
+      </div>
+
+      <div class="project">
+        <div class="slidetext">
+          <h3>02/project2</h3>
+          <p>Short description of project 2. Short description of project 2.Short description of project 2Short description of project 2</p>
+          <div class="badge">
+            <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white" alt="spring">
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white" alt="javascript">
+            <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white" alt="mysql">
+          </div>
+        </div>
+        <img src="https://placehold.co/700x500" alt="2">
+      </div>
+
+      <div class="project">
+        <div class="slidetext">
+          <h3>03/project3</h3>
+          <p>Short description of project 3. Short description of project 3.Short description of project 3. Short description of project 3.Short description of project 3. Short description of project 3.</p>
+          <div class="badge">
+            <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white" alt="spring">
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white" alt="javascript">
+            <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white" alt="mysql">
+          </div>
+        </div>
+        <img src="https://placehold.co/700x500" alt="3">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+    <!-- skills 임시 -->
+    <!-- <section id="skills">
+        <h1>SKILLS</h1>
+        <div id="skill">
+            
+        </div>
+    </section> -->
+
+    <!-- contact -->
     <section id="contact">
-            <button class="button">CONTACT</button>
-                <div class="textbody">
-                <i class="fa-solid fa-envelope"></i><p>yhbujn1100@gmail.com</p>
-                <i class="fa-solid fa-phone"></i><p>010-0000-0000</p></div>
+        <h1>CONTACT</h1>
+        <div id="contact">
+            <div class="contact-item">
+              <div class="label">email.</div>
+              <div class="value">yhbujn1100@gmail.com</div>
+            </div>
+            <div class="contact-item">
+              <div class="label">phone.</div>
+              <div class="value">010-0000-0000</div>
+            </div>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://github.com/grogub" target="_blank" class="icon-button">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://naver.com" target="_blank" class="icon-button">
+            <i class="fab fa-hashtag"></i>
+          </a>
+          <a href="mailto:yhbujn1100@gmail.com" class="icon-button">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
     </section>
 
-    <footer>
-        <div> </div>
-        <hr />
+    <button onclick="scrollToTop()" class="top-button" id="topBtn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <footer>    
+
     </footer>
 </body>
 </html>
