@@ -1,54 +1,33 @@
-const slides = document.querySelectorAll('.slider .textbody');
-const indicators = document.querySelectorAll('.indicator i');
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', () => {
+  const projects = document.querySelectorAll('.project');
 
-function updateIndicators() {
-  
-  indicators.forEach((dot, index) => {
-    if (index === currentIndex) {
-      dot.classList.remove('fa-regular');
-      dot.classList.add('fa-solid');
-    } else {
-      dot.classList.remove('fa-solid');
-      dot.classList.add('fa-regular');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  projects.forEach(project => {
+    observer.observe(project);
+  });
+});
+
+const topBtn = document.getElementById("topBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  });
-}
-function updateSlides() {
-  slides.forEach((slide, i) => {
-    if (i === currentIndex) {
-      slide.style.transform = 'translateX(0)';
-      slide.style.opacity = '1';
-      slide.style.zIndex = '1';
-    } else if (i === (currentIndex - 1 + slides.length) % slides.length) {
-      slide.style.transform = 'translateX(-100%)';
-      slide.style.opacity = '0';
-      slide.style.zIndex = '0';
-    } else {
-      slide.style.transform = 'translateX(100%)';
-      slide.style.opacity = '0';
-      slide.style.zIndex = '0';
-    }
-  });
-  updateIndicators();
-}
-
-document.querySelector('.arrowbutton.right').addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateSlides();
-});
-
-document.querySelector('.arrowbutton.left').addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  updateSlides();
-});
-
-indicators.forEach((dot,index) => {
-  dot.addEventListener('click', () => {
-    currentIndex = index;
-    updateSlides();
-    
-  });
-});
-
-updateSlides();
